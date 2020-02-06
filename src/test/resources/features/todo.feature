@@ -7,12 +7,12 @@ Feature: To Do API endpoint.
   Scenario Outline: Positive tests
     User calls API endpoint which should return valid data about a task.
 
-    When User calls API with id "<todo_id>" as path param
+    When User calls ToDo API with ToDo id "<todo_id>" as path param
     Then response status should be "<status_code>"
-    And body should contain parameter "userId" equals to "<userId>"
-    And body should contain parameter "id" equals to "<todo_id>"
-    And body should contain parameter "title" equals to "<title>"
-    And body should contain parameter "completed" equals to "<completed>"
+    And response body should contain parameter "userId" equals to "<userId>"
+    And response body should contain parameter "id" equals to "<todo_id>"
+    And response body should contain parameter "title" equals to "<title>"
+    And response body should contain parameter "completed" equals to "<completed>"
 
 # The third test will fail, it's necessary for example for reporting
     Examples:

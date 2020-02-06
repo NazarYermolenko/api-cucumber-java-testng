@@ -13,8 +13,8 @@ public class BaseSteps {
         this.testContext = context;
     }
 
-    @And("body should contain parameter {string} equals to {string}")
-    public void bodyShouldContainParameterEqualToValue(String param, String value) {
+    @And("response body should contain parameter {string} equals to {string}")
+    public void responseBodyShouldContainParameterEqualToValue(String param, String value) {
         assertThat(testContext.getResponse().then().extract().body().jsonPath().get(param).toString(), equalTo(value));
     }
 }

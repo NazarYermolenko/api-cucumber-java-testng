@@ -15,7 +15,7 @@ public class ToDoApiSteps {
         this.testContext = context;
     }
 
-    @When("User calls API with id {string} as path param")
+    @When("User calls ToDo API with ToDo id {string} as path param")
     public void userCallsAPIWithIdAsPathParam(String id) {
         Response response = new ToDoApi().getToDoById(id);
         testContext.setResponse(response);
